@@ -1,0 +1,115 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 32147586BCAD                source dw 1432h, 8675h, 0ADBCh
+    15                                      len_s equ ($-source)/2
+    16 00000006 00000000<rept>              destination times len_s dd 0
+    17 00000012 00000000<rept>              result times len_s dd 0
+    18 0000001E 00000000                    list_of_bytes db 0, 0, 0, 0 
+    19 00000022 10                          a db 10h
+    20                                      ;x db 0
+    21                                      
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ; ...
+    26                                              ; Se da un sir de cuvinte. Sa se obtina din acesta un sir de dublucuvinte, in care fiecare dublucuvant va contine nibble-urile despachetate pe octet (fiecare cifra hexa va fi precedata de un 0), aranjate
+    27                                              ; Exemplu:
+    28                                              ; pentru sirul initial:
+    29                                              ; 1432h, 8675h, 0ADBCh, ...
+    30                                              ; Se va obtine:
+    31                                              ; 01020304h,  05060708h, 0A0B0C0Dh, ... 
+    32 00000000 BE[00000000]                        mov esi, source
+    33 00000005 BF[06000000]                        mov edi, destination
+    34 0000000A B903000000                          mov ecx, len_s
+    35 0000000F FC                                  cld
+    36 00000010 E382                                jecxz final
+    36          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    37 00000012 BA00000000                          mov edx, 0
+    38                                              repeat:
+    39 00000017 66AD                                    lodsw; ax:=[esi]
+    40                                                  divide:
+    41 00000019 F635[22000000]                              div byte[a]
+    42 0000001F 88E3                                        mov bl, ah
+    43 00000021 B400                                        mov ah, 0
+    44 00000023 C1E308                                      shl ebx, 8
+    45 00000026 3C00                                        cmp al, 0
+    46 00000028 75EF                                        jne divide
+    47 0000002A 89D8                                    mov eax, ebx
+    48 0000002C AB                                      stosd
+    49 0000002D E2E8                                    loop repeat
+    50 0000002F B903000000                          mov ecx, len_s
+    51 00000034 89FE                                mov esi, edi
+    52 00000036 BF[1E000000]                        mov edi, list_of_bytes
+    53                                              repeat1:
+    54                                                  ; mov [list_of_bytes], byte[edi]
+    55                                                  ; inc edi
+    56                                                  
+    57                                                  ; mov [list_of_bytes + 1], byte[edi]
+    58                                                  ; inc edi
+    59                                                  
+    60                                                  ; mov [list_of_bytes + 2], byte[edi]
+    61                                                  ; inc edi
+    62                                                  
+    63                                                  ; mov [list_of_bytes + 3], byte[edi]
+    64                                                  ; inc edi
+    65 0000003B AA                                      stosb 
+    66 0000003C AC                                      lodsb
+    67                                                  
+    68 0000003D AA                                      stosb 
+    69 0000003E AC                                      lodsb
+    70                                                  
+    71 0000003F AA                                      stosb 
+    72 00000040 AC                                      lodsb
+    73                                                  
+    74 00000041 AA                                      stosb 
+    75 00000042 AC                                      lodsb
+    76                                                  
+    77 00000043 51                                      push ecx
+    78                                                  ;push esi
+    79 00000044 66BA0100                                mov dx, 1
+    80                                                  repeat2:
+    81 00000048 6683FA00                                    cmp dx, 0
+    82 0000004C 7426                                        je nextstep
+    83 0000004E BE[1E000000]                                mov esi, list_of_bytes
+    84 00000053 66BA0000                                    mov dx, 0
+    85 00000057 B903000000                                  mov ecx, 3
+    86                                                      innerLoop:
+    87 0000005C 8A06                                            mov al, byte[esi] 
+    88 0000005E 3A4601                                          cmp al, byte[esi+1]
+    89 00000061 730C                                            jae next
+    90 00000063 8A5E01                                          mov bl, byte[esi + 1]
+    91 00000066 881E                                            mov byte[esi], bl
+    92 00000068 884601                                          mov byte[esi + 1], al
+    93 0000006B 66BA0100                                        mov dx, 1
+    94                                                          next:
+    95 0000006F 46                                                  inc esi
+    96 00000070 E2EA                                                loop innerLoop
+    97 00000072 EBD4                                                jmp repeat2
+    98                                                  nextstep:
+    99 00000074 8A06                                        mov al, byte[esi]
+   100 00000076 C1E008                                      shl eax, 8
+   101 00000079 8A4601                                      mov al, byte[esi + 1]
+   102 0000007C C1E008                                      shl eax, 8
+   103 0000007F 8A4602                                      mov al, byte[esi + 2]
+   104 00000082 C1E008                                      shl eax, 8
+   105 00000085 8A4603                                      mov al, byte[esi + 3]
+   106 00000088 8982[12000000]                              mov [edx + result], eax
+   107 0000008E 83C201                                      add edx, 1
+   108                                                      ;pop esi
+   109 00000091 59                                          pop ecx
+   110 00000092 E2A7                                        loop repeat1
+   111                                              final:
+   112                                                  ; exit(0)
+   113 00000094 6A00                                    push    dword 0      ; push the parameter for exit onto the stack
+   114 00000096 FF15[00000000]                          call    [exit]       ; call exit to terminate the program

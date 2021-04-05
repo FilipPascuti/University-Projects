@@ -1,0 +1,52 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 FFFF                        a dw 0xFFFF 
+    15 00000002 00000000                    b dd 0
+    16                                  ; our code starts here
+    17                                  segment code use32 class=code
+    18                                      start:
+    19                                          ; ...
+    20                                          ; Se da un cuvant A. Sa se obtina dublucuvantul B astfel:
+    21                                          ;1 bitii 0-3 ai lui B sunt 0;
+    22                                          ;2 bitii 4-7 ai lui B sunt bitii 8-11 ai lui A
+    23                                          ;3 bitii 8-9 si 10-11 ai lui B sunt bitii 0-1 inversati ca valoare ai lui A (deci de 2 ori) ;
+    24                                          ;4 bitii 12-15 ai lui B sunt biti de 1
+    25                                          ;5 bitii 16-31 ai lui B sunt identici cu bitii 0-15 ai lui B.
+    26                                          ;1
+    27 00000000 BB00000000                      mov ebx, 0
+    28                                          ;2
+    29 00000005 66A1[00000000]                  mov ax, [a]
+    30 0000000B 6625000F                        and ax, 0000111100000000b
+    31 0000000F 66C1E804                        shr ax, 4
+    32 00000013 6609C3                          or bx, ax
+    33                                          ;3
+    34 00000016 66A1[00000000]                  mov ax, [a]
+    35 0000001C 66F7D0                          not ax
+    36 0000001F 6683E00B                        and ax, 0000000000000011
+    37 00000023 66C1E008                        shl ax, 8
+    38 00000027 6609C3                          or bx, ax 
+    39 0000002A 66C1E002                        shl ax, 2
+    40 0000002E 6609C3                          or bx, ax
+    41                                          ;4
+    42 00000031 6681CB0070                      or bx, 1111000000000000
+    42          ******************       warning: word data exceeds bounds [-w+number-overflow]
+    43                                          ;5
+    44 00000036 6689D8                          mov ax, bx
+    45 00000039 C1E310                          shl ebx, 16
+    46 0000003C 6689C3                          mov bx, ax
+    47                                          ;Final result
+    48 0000003F 891D[02000000]                  mov [b], ebx
+    49                                          ; exit(0)
+    50 00000045 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    51 00000047 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

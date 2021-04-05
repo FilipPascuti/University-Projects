@@ -1,0 +1,80 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, scanf, printf, fopen, fwrite  ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll      ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import scanf msvcrt.dll
+    10                                  import printf msvcrt.dll
+    11                                  import fopen msvcrt.dll    
+    12                                  import fwrite msvcrt.dll                        ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    13                                  
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16 00000000 00000000                    fd dd 0
+    17 00000004 257300                      read_format db '%s', 0
+    18 00000007 257300                      print_format db '%s', 0
+    19 0000000A 00                          file_name db 0
+    20                                      len equ $
+    21 0000000B 00000000                    lenght dd 0
+    22 0000000F 7700                        acc_mode db 'w', 0
+    23 00000011 00                          the_word db 0
+    24                                      
+    25                                  ; our code starts here
+    26                                  segment code use32 class=code
+    27                                      start:
+    28                                          ; ...
+    29                                          ; read a file name from the keyboard then read words until $ is read
+    30                                          ; write in the file only the words that have a an even number of words
+    31                                          
+    32                                          ;scanf(format, filename)
+    33 00000000 68[0A000000]                    push file_name
+    34 00000005 68[04000000]                    push read_format
+    35 0000000A FF15[00000000]                  call [scanf]
+    36 00000010 83C408                          add esp, 4 * 2
+    37                                          
+    38 00000013 B8[0B000000]                    mov eax, len
+    39 00000018 2D[0A000000]                    sub eax, file_name
+    40                                          
+    41                                          
+    42                                          ;printf(format, filename)
+    43 0000001D 50                              push eax
+    44 0000001E 68[07000000]                    push print_format
+    45 00000023 FF15[00000000]                  call [printf]
+    46 00000029 83C408                          add esp, 4 * 2
+    47                                          
+    48                                          
+    49                                          ; fopen(file_name, acc_mode)
+    50                                          ; push acc_mode
+    51                                          ; push file_name
+    52                                          ; call [fopen]
+    53                                          ; add esp, 4 * 2
+    54                                          
+    55                                          ; mov [fd], eax
+    56                                          ; cmp eax, 0
+    57                                          ; je final
+    58                                          
+    59                                          ; do:
+    60                                              ; ;scanf(format, word)
+    61                                              ; push the_word
+    62                                              ; push read_format
+    63                                              ; call [scanf]
+    64                                              ; add esp, 4 * 2
+    65                                              ; mov dl, [the_word]
+    66                                              
+    67                                              
+    68                                              ; cmp dl, '$'
+    69                                              ; jne do
+    70                                          
+    71                                          ; ;printf(format, filename)
+    72                                          ; push file_name
+    73                                          ; push print_format
+    74                                          ; call [printf]
+    75                                          ; add esp, 4 * 2
+    76                                          
+    77                                          final:
+    78                                              ; exit(0)
+    79 0000002C 6A00                                push    dword 0      ; push the parameter for exit onto the stack
+    80 0000002E FF15[00000000]                      call    [exit]       ; call exit to terminate the program

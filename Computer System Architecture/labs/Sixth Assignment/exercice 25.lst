@@ -1,0 +1,83 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll                          ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import scanf msvcrt.dll
+    11                                  
+    12                                  
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 00000000                    a dd 0
+    17 00000004 00000000                    b dd 0
+    18 00000008 256400                      read_format db "%d", 0
+    19 0000000B 613D202564203C2062-         lower_format db "a= %d < b= %d ", 0
+    19 00000014 3D2025642000       
+    20 0000001A 613D202564203E2062-         greater_format db "a= %d > b= %d ", 0
+    20 00000023 3D2025642000       
+    21 00000029 613D202564203D2062-         equal_format db "a= %d = b= %d ", 0
+    21 00000032 3D2025642000       
+    22                                      
+    23                                  ; our code starts here
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          ; Sa se citeasca de la tastatura doua numere a si b (in baza 10) şi să se determine relaţia de ordine dintre ele (a < b, a = b sau a > b).    Afisati rezultatul în următorul format: "<a> < <b>, <a> = <b
+    27                                          
+    28                                          ; scanf("%d", a)
+    29 00000000 68[00000000]                    push a 
+    30 00000005 68[08000000]                    push read_format
+    31 0000000A FF15[00000000]                  call [scanf]
+    32 00000010 83C408                          add esp, 4 * 2
+    33                                          
+    34                                          ; scanf("%d", b)
+    35 00000013 68[04000000]                    push b
+    36 00000018 68[08000000]                    push read_format
+    37 0000001D FF15[00000000]                  call [scanf]
+    38 00000023 83C408                          add esp, 4 * 2
+    39                                          
+    40 00000026 8B1D[04000000]                  mov ebx, [b]
+    41 0000002C A1[00000000]                    mov eax, [a]
+    42 00000031 39D8                            cmp eax, ebx
+    43 00000033 7D1E                            jge greater_or_equal
+    44                                          ; printf(lower_format, a, b)
+    45 00000035 60                              pusha
+    46 00000036 FF35[04000000]                  push dword[b]
+    47 0000003C FF35[00000000]                  push dword[a]
+    48 00000042 68[0B000000]                    push lower_format
+    49 00000047 FF15[00000000]                  call [printf]
+    50 0000004D 83C40C                          add esp, 4 * 3
+    51 00000050 EB3F                            jmp final
+    52 00000052 61                              popa
+    53                                          
+    54                                          greater_or_equal:
+    55 00000053 39D8                                cmp eax, ebx
+    56 00000055 741E                                je equal
+    57                                              ; printf(greater_format, a, b)
+    58 00000057 60                                  pusha
+    59 00000058 FF35[04000000]                      push dword[b]
+    60 0000005E FF35[00000000]                      push dword[a]
+    61 00000064 68[1A000000]                        push greater_format
+    62 00000069 FF15[00000000]                      call [printf]
+    63 0000006F 83C40C                              add esp, 4 * 3
+    64 00000072 EB1D                                jmp final
+    65 00000074 61                                  popa
+    66                                              
+    67                                          equal:
+    68                                              ; printf(equal_format, a, b)
+    69 00000075 60                                  pusha
+    70 00000076 FF35[04000000]                      push dword[b]
+    71 0000007C FF35[00000000]                      push dword[a]
+    72 00000082 68[29000000]                        push equal_format
+    73 00000087 FF15[00000000]                      call [printf]
+    74 0000008D 83C40C                              add esp, 4 * 3
+    75 00000090 61                                  popa
+    76                                          
+    77                                          final:
+    78                                              ; exit(0)
+    79 00000091 6A00                                push    dword 0      ; push the parameter for exit onto the stack
+    80 00000093 FF15[00000000]                      call    [exit]       ; call exit to terminate the program

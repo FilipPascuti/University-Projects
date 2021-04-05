@@ -1,0 +1,39 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 01                          a db 1 
+    15 00000001 01                          b db 1
+    16 00000002 04                          c db 4
+    17 00000003 0200                        d dw 2
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ; a,b,c - byte, d - word
+    22                                          ;d*(d+2*a)/(b*c)
+    23 00000000 A0[01000000]                    mov al, [b]
+    24 00000005 F625[02000000]                  mul byte[c]
+    25                                          ; ax := b * c
+    26 0000000B 6689C3                          mov bx, ax
+    27                                          ; bx := ax = b * c
+    28 0000000E B002                            mov al, 2
+    29 00000010 F625[00000000]                  mul byte[a]
+    30                                          ; ax := al * 2 = a * 2
+    31 00000016 660305[03000000]                add ax, [d]
+    32                                          ; ax := 2 * a + d
+    33 0000001D 66F725[03000000]                mul word[d]
+    34                                          ; dx:ax := ax * d = (d + 2 * a) * d
+    35 00000024 66F7F3                          div bx
+    36                                          ;ax quotient, dx remainder
+    37                                          ; exit(0)
+    38 00000027 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    39 00000029 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

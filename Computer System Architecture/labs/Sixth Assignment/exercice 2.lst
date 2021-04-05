@@ -1,0 +1,53 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf      ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll          ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll        ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import scanf msvcrt.dll
+    11                                  
+    12                                  
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 00000000                    a dd 0
+    17 00000004 0000                        b dw 0
+    18 00000006 00000000                    result dd 0
+    19 0000000A 256400                      read_format db "%d", 0
+    20 0000000D 726573756C74203D20-         print_format db "result = %d", 0
+    20 00000016 256400             
+    21                                      
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ;Sa se citeasca de la tastatura doua numere a si b (in baza 10) si sa se calculeze a/b. Catul impartirii se va salva in memorie in variabila ;"rezultat" (definita in segmentul de date). Valorile se considera
+    26                                          ;printf(format, a)
+    27 00000000 68[00000000]                    push a
+    28 00000005 68[0A000000]                    push read_format
+    29 0000000A FF15[00000000]                  call [scanf]
+    30 00000010 83C408                          add esp, 4 * 2
+    31 00000013 68[04000000]                    push b
+    32 00000018 68[0A000000]                    push read_format
+    33 0000001D FF15[00000000]                  call [scanf]
+    34 00000023 83C408                          add esp, 4 * 2
+    35                                          
+    36 00000026 B800000000                      mov eax, 0
+    37 0000002B BA00000000                      mov edx, 0
+    38                                          
+    39 00000030 66A1[00000000]                  mov ax, [a]
+    40 00000036 668B15[02000000]                mov dx, [a + 2]
+    41 0000003D 66F735[04000000]                div word[b]
+    42 00000044 66A3[06000000]                  mov [result], ax
+    43                                          
+    44 0000004A 60                              pusha
+    45 0000004B FF35[06000000]                  push dword[result]
+    46 00000051 68[0D000000]                    push print_format
+    47 00000056 FF15[00000000]                  call [printf]
+    48 0000005C 83C408                          add esp, 4 * 2
+    49 0000005F 61                              popa
+    50                                          ; exit(0)
+    51 00000060 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    52 00000062 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

@@ -1,0 +1,115 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll                          ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 32147586BCAD                s dw 1432h, 8675h, 0ADBCh
+    15                                      len equ ($ - s) / 2
+    16 00000006 00000000<rept>              d times len dd 0
+    17 00000012 00000000                    a dd 0
+    18 00000016 00000000<rept>              result times len dd 0
+    19 00000022 25640A0D00                  print_format db "%d", 10, 13, 0
+    20                                      
+    21                                  ; our code starts here
+    22                                  segment code use32 class=code
+    23                                      start:
+    24                                          ; Se da un sir de cuvinte. Sa se obtina din acesta un sir de dublucuvinte, in care fiecare dublucuvant va contine nibble-urile despachetate pe octet 
+    25                                          ;(fiecare cifra hexa va fi precedata de un 0), aranjate crescator in interiorul dublucuvantului.
+    26                                          ;   Exemplu:
+    27                                          ;   pentru sirul initial:
+    28                                          ;   1432h, 8675h, 0ADBCh, ...
+    29                                          ;   Se va obtine:
+    30                                          ;   01020304h,  05060708h, 0A0B0C0Dh, ... 
+    31 00000000 B800000000                      mov eax, 0
+    32 00000005 BE[00000000]                    mov esi, s
+    33 0000000A BF[06000000]                    mov edi, d    
+    34 0000000F B903000000                      mov ecx, len
+    35 00000014 83F900                          cmp ecx, 0
+    36 00000017 7505                            jne mai_departe
+    37 00000019 E992000000                      jmp final
+    38                                          mai_departe:
+    39 0000001E FC                              cld 
+    40                                          repeat1:
+    41 0000001F AC                                  lodsb; al:= 14
+    42 00000020 88C3                                mov bl, al
+    43                                              
+    44 00000022 C0E004                              shl al, 4
+    45 00000025 C0E804                              shr al, 4
+    46 00000028 AA                                  stosb
+    47                                              
+    48 00000029 88D8                                mov al, bl
+    49 0000002B C0E804                              shr al, 4
+    50 0000002E AA                                  stosb
+    51                                              
+    52 0000002F AC                                  lodsb; al:= 14
+    53 00000030 88C3                                mov bl, al
+    54                                              
+    55 00000032 C0E004                              shl al, 4
+    56 00000035 C0E804                              shr al, 4
+    57 00000038 AA                                  stosb
+    58                                              
+    59 00000039 88D8                                mov al, bl
+    60 0000003B C0E804                              shr al, 4
+    61 0000003E AA                                  stosb
+    62 0000003F E2DE                                loop repeat1
+    63                                            
+    64 00000041 BE[06000000]                    mov esi, d
+    65 00000046 BF[16000000]                    mov edi, result 
+    66 0000004B B903000000                      mov ecx, len
+    67                                          repeat2:
+    68 00000050 AD                                  lodsd
+    69 00000051 A3[12000000]                        mov [a], eax
+    70 00000056 56                                  push esi
+    71 00000057 51                                  push ecx
+    72 00000058 66BA0100                            mov dx, 1
+    73                                              repeat:
+    74 0000005C 6683FA00                                cmp dx, 0
+    75 00000060 7426                                    je next_step
+    76 00000062 66BA0000                                mov dx, 0
+    77 00000066 BE[12000000]                            mov esi, a
+    78 0000006B B903000000                              mov ecx, 3
+    79                                                  inner_loop:
+    80 00000070 8A06                                        mov al, byte[esi]
+    81 00000072 3A4601                                      cmp al, byte[esi + 1]
+    82 00000075 730C                                        jae next
+    83 00000077 66BA0100                                    mov dx, 1
+    84 0000007B 8A5E01                                      mov bl, byte[esi + 1]
+    85 0000007E 881E                                        mov byte[esi], bl
+    86 00000080 884601                                      mov byte[esi + 1], al
+    87                                                      next:
+    88 00000083 46                                              inc esi
+    89 00000084 E2EA                                            loop inner_loop
+    90 00000086 EBD4                                            jmp repeat
+    91                                              next_step:
+    92 00000088 59                                      pop ecx
+    93 00000089 5E                                      pop esi
+    94 0000008A A1[12000000]                            mov eax, [a]
+    95 0000008F AB                                      stosd         
+    96 00000090 E2BE                                    loop repeat2
+    97 00000092 BE[16000000]                    mov esi, result
+    98 00000097 B903000000                      mov ecx, len
+    99                                          repeat3: 
+   100 0000009C AD                                  lodsd 
+   101                                              ;printf(print_format, eax)
+   102 0000009D 60                                  pusha
+   103 0000009E 50                                  push eax
+   104 0000009F 68[22000000]                        push print_format
+   105 000000A4 FF15[00000000]                      call [printf]
+   106 000000AA 83C408                              add esp, 4 * 2
+   107 000000AD 61                                  popa
+   108 000000AE E2EC                                loop repeat3
+   109                                          final:
+   110                                              ; exit(0)
+   111 000000B0 6A00                                push    dword 0      ; push the parameter for exit onto the stack
+   112 000000B2 FF15[00000000]                      call    [exit]       ; call exit to terminate the program
+   113                                          
+   114                                          
+   115                                          

@@ -1,0 +1,70 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf       ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll          ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll        ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import scanf msvcrt.dll
+    11                                  
+    12                                  ; our data is declared here (the variables needed by our program)
+    13                                  segment data use32 class=data
+    14                                      ; ...
+    15 00000000 00000000<rept>              a times 100 dd 0
+    16 00000190 00000000                    len dd 0
+    17 00000194 6C656E6774683D2000          msg_len db "length= ", 0
+    18 0000019D 656C656D656E743D20-         msg_elem db "element= ", 0
+    18 000001A6 00                 
+    19 000001A7 256400                      format db "%d", 0
+    20 000001AA 7468652073756D206F-         print_format db "the sum of the elements is %d", 0
+    20 000001B3 662074686520656C65-
+    20 000001BC 6D656E747320697320-
+    20 000001C5 256400             
+    21                                      
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ; ...
+    26 00000000 BE[00000000]                    mov esi, a 
+    27                                          ;printf(msg_len)
+    28 00000005 68[94010000]                    push msg_len
+    29 0000000A FF15[00000000]                  call [printf]
+    30 00000010 83C404                          add esp, 4
+    31                                          ;scanf(format, len)
+    32 00000013 68[90010000]                    push len
+    33 00000018 68[A7010000]                    push format
+    34 0000001D FF15[00000000]                  call [scanf]
+    35 00000023 83C408                          add esp, 4 * 2
+    36 00000026 8B0D[90010000]                  mov ecx, [len]
+    37                                          do:
+    38 0000002C 60                                  pusha
+    39                                              ;printf(msg_elem)
+    40 0000002D 68[9D010000]                        push msg_elem
+    41 00000032 FF15[00000000]                      call [printf]
+    42 00000038 83C404                              add esp, 4
+    43                                              ;scanf(format, esi)
+    44 0000003B 56                                  push esi
+    45 0000003C 68[A7010000]                        push format 
+    46 00000041 FF15[00000000]                      call [scanf]
+    47 00000047 83C408                              add esp, 4 * 2
+    48 0000004A 61                                  popa 
+    49 0000004B 83C604                              add esi, 4
+    50 0000004E E2DC                                loop do
+    51 00000050 BE[00000000]                    mov esi, a
+    52 00000055 8B0D[90010000]                  mov ecx, [len]
+    53 0000005B BA00000000                      mov edx, 0
+    54                                          do2:
+    55 00000060 AD                                  lodsd
+    56 00000061 01C2                                add edx, eax
+    57 00000063 E2FB                                loop do2
+    58 00000065 60                              pusha 
+    59                                          ;printf(print_format, edx)
+    60 00000066 52                              push edx
+    61 00000067 68[AA010000]                    push print_format
+    62 0000006C FF15[00000000]                  call [printf]
+    63 00000072 61                              popa 
+    64                                          ; exit(0)
+    65 00000073 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    66 00000075 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

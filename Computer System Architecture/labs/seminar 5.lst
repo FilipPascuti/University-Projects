@@ -1,0 +1,40 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  extern exit, printf, scanf ; exit, printf and scanf are external functions
+     4                                  import exit msvcrt.dll
+     5                                  import printf msvcrt.dll ; tell the assembler that function printf is in msvcrt.dll
+     6                                  import scanf msvcrt.dll ;
+     7                                  
+     8                                  segment data use32 class=data
+     9 00000000 00000000                    n dd 0
+    10 00000004 6E3D00                      message db "n=", 0 ; strings for C functions must end with ZERO (ASCIIZ strings)
+    11 00000007 256400                      format db "%d", 0 ; strings for C functions must end with ZERO (ASCIIZ strings)
+    12 0000000A 7468652076616C7565-         new_format db "the value of n= %d"
+    12 00000013 206F66206E3D202564 
+    13                                  segment code use32 class=code
+    14                                   start:
+    15                                  
+    16                                      ; calling printf(message) => "n=" will be printed on the screen
+    17 00000000 68[04000000]                push dword message ; we store the offset of message (not its value) on the stack
+    18 00000005 FF15[00000000]              call [printf] ; call printf
+    19 0000000B 83C404                      add esp, 4*1 ; free parameters from the stack; 4 = dword size in bytes
+    20                                      ; 1 = number of parameters
+    21                                      ; remember that the stack grows towards small addresses and the elements of the stack are dwords.
+    22                                      ; that is, assuming the dword from the top of the stack is at address ADR, by pushing another dword
+    23                                      ; on top of the stack, the new dword is on address ADR-4. ESP always points to the top of the stack.
+    24                                      ; we clear/free 4 bytes from the top of the stack by “add ESP, 4”
+    25                                  
+    26                                      ; call scanf(format, n) => read a decimal number in variable n
+    27                                      ; parameters are placed on the stack from right to left
+    28 0000000E 68[00000000]                push dword n ; push the offset of n
+    29 00000013 68[07000000]                push dword format ; push the offset of format
+    30 00000018 FF15[00000000]              call [scanf] ;
+    31 0000001E 83C408                      add esp, 4 * 2 ; free 2 dwords from the stack
+    32                                      
+    33 00000021 68[0A000000]                push dword new_format
+    34 00000026 68[00000000]                push dword n
+    35 0000002B FF15[00000000]              call [printf]
+    36 00000031 83C408                      add esp, 4 * 2
+    37                                      ; call exit(0)
+    38 00000034 6A00                        push dword 0 ; punem pe stiva parametrul pentru exit
+    39 00000036 FF15[00000000]              call [exit] ; apelam exit pentru a incheia programul

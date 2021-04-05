@@ -1,0 +1,108 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, fopen, fread, printf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import fopen msvcrt.dll
+    10                                  import fread msvcrt.dll     ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    11                                  import printf msvcrt.dll
+    12                                  
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 7465787466696C652E-         file_name db "textfile.txt", 0
+    16 00000009 74787400           
+    17 0000000D 7200                        acc_mode db "r", 0
+    18 0000000F 256400                      format db "%d", 0
+    19 00000012 00000000                    fd dd 0
+    20 00000016 00                          a db 0
+    21 00000017 00000000                    x dd 0
+    22                                          
+    23                                          
+    24                                  ; our code starts here
+    25                                  segment code use32 class=code
+    26                                      start:
+    27                                          ; Se da un fisier text. Sa se citeasca continutul fisierului, sa se contorizeze numarul de consoane si sa se afiseze aceasta valoare. Numele fisierului text este definit in segmentul de date.
+    28                                          
+    29                                          ;1. open the file
+    30                                          ; fopen(file_name, acc_mode)
+    31 00000000 68[0D000000]                    push acc_mode
+    32 00000005 68[00000000]                    push file_name
+    33 0000000A FF15[00000000]                  call [fopen]
+    34 00000010 83C408                          add esp, 4 * 2
+    35 00000013 A3[12000000]                    mov [fd], eax
+    36 00000018 83F800                          cmp eax, 0
+    37 0000001B 747B                            je final
+    38 0000001D BA00000000                      mov edx, 0
+    39                                          do:
+    40 00000022 60                                  pusha
+    41                                              ;fread(a, 1, a, fd)
+    42 00000023 FF35[12000000]                      push dword[fd]
+    43 00000029 6A01                                push dword 1
+    44 0000002B 6A01                                push dword 1
+    45 0000002D 68[16000000]                        push a
+    46 00000032 FF15[00000000]                      call [fread]
+    47 00000038 83C410                              add esp, 4 * 4
+    48 0000003B 83F800                              cmp eax, 0; check if we reached the end of the file
+    49 0000003E A3[17000000]                        mov [x], eax
+    50 00000043 61                                  popa
+    51 00000044 7443                                je after_read
+    52                                              
+    53 00000046 A0[16000000]                        mov al, [a]
+    54                                              
+    55 0000004B 3C41                                cmp al, 'A'
+    56 0000004D 7C38                                jl not_a_letter
+    57                                              
+    58 0000004F 3C7A                                cmp al, 'z'
+    59 00000051 7F34                                jg not_a_letter
+    60                                              
+    61 00000053 3C5A                                cmp al, 'Z'
+    62 00000055 7E1B                                jle is_upper_letter
+    63                                              
+    64 00000057 3C61                                cmp al, 'a'
+    65 00000059 7D00                                jge is_lower_letter
+    66                                              
+    67                                              is_lower_letter:
+    68 0000005B 3C61                                    cmp al, 'a'
+    69 0000005D 7428                                    je not_a_letter
+    70 0000005F 3C65                                    cmp al, 'e'
+    71 00000061 7424                                    je not_a_letter
+    72 00000063 3C69                                    cmp al, 'i'
+    73 00000065 7420                                    je not_a_letter
+    74 00000067 3C6F                                    cmp al, 'o'
+    75 00000069 741C                                    je not_a_letter
+    76 0000006B 3C75                                    cmp al, 'u'
+    77 0000006D 7418                                    je not_a_letter
+    78                                                  
+    79 0000006F 42                                      inc edx
+    80 00000070 EB15                                    jmp not_a_letter
+    81                                              
+    82                                              is_upper_letter:
+    83 00000072 3C41                                    cmp al, 'A'
+    84 00000074 7411                                    je not_a_letter
+    85 00000076 3C45                                    cmp al, 'E'
+    86 00000078 740D                                    je not_a_letter
+    87 0000007A 3C49                                    cmp al, 'I'
+    88 0000007C 7409                                    je not_a_letter
+    89 0000007E 3C4F                                    cmp al, 'O'
+    90 00000080 7405                                    je not_a_letter
+    91 00000082 3C55                                    cmp al, 'U'
+    92 00000084 7401                                    je not_a_letter
+    93                                                  
+    94 00000086 42                                      inc edx
+    95                                              
+    96                                              not_a_letter:
+    97 00000087 EB99                                    jmp do
+    98                                          after_read:
+    99 00000089 52                                  push edx
+   100 0000008A 68[0F000000]                        push format
+   101 0000008F FF15[00000000]                      call [printf]
+   102 00000095 83C408                              add esp, 4 * 2  
+   103                                          
+   104                                          final:
+   105                                              ; exit(0)
+   106 00000098 6A00                                push    dword 0      ; push the parameter for exit onto the stack
+   107 0000009A FF15[00000000]                      call    [exit]       ; call exit to terminate the program

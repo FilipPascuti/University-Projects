@@ -1,0 +1,98 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 2B3432614033242A            s db '+', '4', '2', 'a', '@', '3', '$', '*'
+    15                                      len equ $-s
+    16 00000008 00<rept>                    d times len db 0
+    17                                      
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ; ...
+    22                                          ; Se da un sir de caractere S. Sa se construiasca sirul D care sa contina toate caracterele speciale (!@#$%^&*) din sirul S.
+    23                                          ; Exemplu:
+    24                                          ; S: '+', '4', '2', 'a', '@', '3', '$', '*'   
+    25                                          ; D: '@','$','*'
+    26 00000000 BE[00000000]                    mov esi, s
+    27 00000005 BF[08000000]                    mov edi, d
+    28 0000000A B908000000                      mov ecx, len
+    29 0000000F FC                              cld
+    30 00000010 B000                            mov al, 0
+    31 00000012 E326                            jecxz theend
+    32                                          repeat:
+    33 00000014 AC                                  lodsb  
+    34 00000015 3C40                                cmp al, '@'
+    35 00000017 741E                                je add_
+    36                                              
+    37 00000019 3C21                                cmp al, '!'
+    38 0000001B 741A                                je add_
+    39                                              
+    40 0000001D 3C23                                cmp al, '#'
+    41 0000001F 7416                                je add_
+    42                                              
+    43 00000021 3C24                                cmp al, '$'
+    44 00000023 7412                                je add_
+    45                                              
+    46 00000025 3C25                                cmp al, '%'
+    47 00000027 740E                                je add_
+    48                                              
+    49 00000029 3C5E                                cmp al, '^'
+    50 0000002B 740A                                je add_
+    51                                              
+    52 0000002D 3C26                                cmp al, '&'
+    53 0000002F 7406                                je add_
+    54                                              
+    55 00000031 3C2A                                cmp al, '*'
+    56 00000033 7402                                je add_
+    57                                              
+    58 00000035 EB01                                jmp over
+    59                                              add_:
+    60 00000037 AA                                      stosb
+    61                                              over:
+    62 00000038 E2DA                                    loop repeat
+    63                                          
+    64                                          
+    65                                              
+    66                                          
+    67                                          theend:
+    68 0000003A 893D[08000000]                      mov [d], edi
+    69                                              ; exit(0)
+    70 00000040 6A00                                push    dword 0      ; push the parameter for exit onto the stack
+    71 00000042 FF15[00000000]                      call    [exit]       ; call exit to terminate the program
+    72                                          
+    73                                          ; add_exclamation_:
+    74                                              ; stosb
+    75                                              ; jmp repeat
+    76                                              
+    77                                          ; add_#_:
+    78                                              ; stosb
+    79                                              ; jmp repeat
+    80                                              
+    81                                          ; add_dollar_sign_:
+    82                                              ; stosb
+    83                                              ; jmp repeat
+    84                                          ; add_modulo_:
+    85                                              ; stosb
+    86                                              ; jmp repeat
+    87                                              
+    88                                          ; add_carrot_:
+    89                                              ; stosb
+    90                                              ; jmp repeat
+    91                                              
+    92                                          ; add_and_:
+    93                                              ; stosb
+    94                                              ; jmp repeat
+    95                                              
+    96                                          ; add_star_:
+    97                                              ; stosb
+    98                                              ; jmp repeat

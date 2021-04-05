@@ -1,0 +1,47 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 313233343536373831-         a dw "1234567812345678"
+    14 00000009 32333435363738     
+    15                                      lena equ ($-a)/2
+    16 00000010 00<rept>                    b1 times lena db 0
+    17 00000018 00<rept>                    b2 times lena db 0
+    18                                  
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; Given an array A of words, build two arrays of bytes:  
+    23                                          ; - array B1 contains as elements the higher part of the words from A
+    24                                          ; - array B2 contains as elements the lower part of the words from A
+    25                                          ; ...
+    26 00000000 BE[00000000]                    mov esi, a 
+    27 00000005 BF[10000000]                    mov edi, b1 
+    28 0000000A B908000000                      mov ecx, lena 
+    29 0000000F FC                              cld
+    30                                          repeat:
+    31 00000010 66AD                                lodsw ; ax <- [esi], esi += 2
+    32                                                      ; al stores the lower part of the word from [esi]
+    33 00000012 AA                                  stosb ; al -> [edi], edi += 2
+    34 00000013 E2FB                                loop repeat
+    35 00000015 BE[00000000]                    mov esi, a 
+    36 0000001A BF[18000000]                    mov edi, b2 
+    37 0000001F B908000000                      mov ecx, lena
+    38                                          repeat1:
+    39 00000024 AD                                  lodsd ; ax <- [esi], esi += 2
+    40 00000025 66C1E808                            shr ax, 8 ; al stores the higher part of the word from [esi] => ah stores the higher part of the word from [esi]
+    41 00000029 AA                                  stosb ; al -> [edi], edi += 2
+    42 0000002A E2F8                                loop repeat1 
+    43                                          
+    44                                          ; exit(0)
+    45 0000002C 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    46 0000002E FF15[00000000]                  call    [exit]       ; call exit to terminate the program

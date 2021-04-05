@@ -1,0 +1,54 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll                          ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 02040103                    a dd 03010402h
+    15                                      len equ $-a
+    16 00000004 613D20256400                print_format db "a= %d", 0
+    17                                  ; our code starts here
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; ...
+    21 00000000 B800000000                      mov eax, 0
+    22 00000005 BA00000000                      mov edx, 0
+    23 0000000A BB00000000                      mov ebx, 0
+    24 0000000F 66BA0100                        mov dx, 1
+    25                                          repeat:
+    26 00000013 6683FA00                            cmp dx, 0
+    27 00000017 7426                                je next_step
+    28 00000019 BE[00000000]                        mov esi, a
+    29 0000001E 66BA0000                            mov dx, 0
+    30 00000022 B903000000                          mov ecx, len - 1
+    31                                              inner_loop:
+    32 00000027 8A06                                    mov al, byte[esi]
+    33 00000029 3A4601                                  cmp al, byte[esi + 1]
+    34 0000002C 730C                                    jae next
+    35 0000002E 8A5E01                                  mov bl, byte[esi + 1]
+    36 00000031 881E                                    mov byte[esi], bl
+    37 00000033 884601                                  mov byte[esi + 1], al
+    38 00000036 66BA0100                                mov dx, 1
+    39                                                  next:
+    40 0000003A 46                                          inc esi
+    41 0000003B E2EA                                        loop inner_loop
+    42 0000003D EBD4                                        jmp repeat
+    43                                          
+    44                                          next_step:
+    45 0000003F 60                                  pusha
+    46 00000040 FF35[00000000]                      push dword[a]
+    47 00000046 68[04000000]                        push print_format
+    48 0000004B FF15[00000000]                      call [printf]
+    49 00000051 83C408                              add esp, 4 * 2
+    50 00000054 61                                  popa
+    51                                              
+    52                                          ; exit(0)
+    53 00000055 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    54 00000057 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
