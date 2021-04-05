@@ -1,0 +1,40 @@
+cls :- write('\33\[2J').
+
+% 2. Are given n points in a plan (represented using its coordinates). Write a predicate to determine all
+% subsets of collinear points.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
