@@ -1,0 +1,40 @@
+a
+1. Find the pastor ids that get paid 1900 or 2200 
+2. Find the pastor ids that speak at Pandora or Ramada
+b
+1. Find the pastor ids that speak at Conferences that take place at Pandora and at Solay
+2. Find the pastor ids that speak at Pandora and have salary 1900
+c
+1. Find the pastor ids that speak at a conference that takes place at Pandora but not at a conference that takes place at Solay
+2. Find the pastor ids that get paid 1900 and don't speak at a conference that takes place at Ramada
+d
+1. show all the pastors and churches, regardles of their relation
+2. show all conferences with their supporting churches even for conferences that don't have supporters yet.
+3. show all the members and if they play in a band show the band name and the instrument they play at
+4. show all the members of church Tabor that play the piano
+e
+1. Find the pastor ids that pastor Church named Tabor and speak at a conference that takes place at Solay
+2. Find the pastor ids for the pastors that pastor the church named Betel
+f
+1. Find the names of the pastors that pastor a church named Tabor
+2. Find the pastors that speak at a conference that takes place at Pandora
+g.
+1. Find the ids of the pastors that speak at a conference in 2021 
+2. Find the ids of the pastors that pastor a church that is on the street Meiului
+h.
+1. Find or each conference that has at least 2 pastors the number of pastors it has
+2. Find the highest salary paid for a pastor for the churches that has multiple pastors
+3. Find the longest speack duration for each conference that will happen in 2021 and has at least two pastors
+4. Find the number of conferences a pastor will speak at
+5. Find the number of members with the same last name that are in the same group
+6. Find for every church that pays the pastors a salary greater than 2000 on average the number of pastors
+7. Find the age of the oldest member for each group that is of type Youth
+i
+1. Find the members that are younger than all members with last name Popa
+2. Find the pastors that get paid more that some pastor with first name Bogdan
+3. Find the pastors that get paid 2200
+4. Find all the members that were not born in the year 2000
+
+--select * from Pastors P inner join Speaks_at S on P.PastorID = S.Pastor inner join Conferences C on S.Conference = C.ConferenceID
+--select * from Pastors P full join Pastors_chuches PC on P.PastorID = PC.Pastor full join Churches C on PC.Church= C.ChurchID
+--select * from Member M inner join Small_group SG on SG.GroupID = M.Attending_group
