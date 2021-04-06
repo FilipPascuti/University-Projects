@@ -1,0 +1,686 @@
+ID: 12
+Execution Stack: [int v ; v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int v, v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int v, v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10, fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10, fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)) ; model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)), model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)), model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@7c725f11 ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@7c725f11, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@7c725f11, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@5eda1429, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@5eda1429, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@3952b6e5, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@3952b6e5, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@3d6fa3d8, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [print(v)]
+Symbol Table: {v=8}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@3d6fa3d8, print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [print(v)]
+Symbol Table: {v=8}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@37318c23, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: []
+Symbol Table: {v=8}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@37318c23, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@164f65f8, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@164f65f8, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@3ff9f9ed, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@3ff9f9ed, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@1231fedb, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@1231fedb, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@4fd4bd19, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@4fd4bd19, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@4f453937, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@4f453937, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@259379b3, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [model.statements.SleepStatement@259379b3, print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: []
+Symbol Table: {v=10}
+Output: [8, 100]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int v ; v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int v, v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int v, v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10 ; fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10, fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v=10, fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {v=0}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)) ; sleep(10) ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)), sleep(10) ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [fork(v=v - 1 ; v=v - 1 ; print(v)), sleep(10) ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(10) ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(10) ; print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(10), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(10), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, v=v - 1 ; print(v)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(9), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(9), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1 ; print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(8), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(8), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [v=v - 1, print(v)]
+Symbol Table: {v=9}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(7), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [print(v)]
+Symbol Table: {v=8}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(7), print(v * 10)]
+Symbol Table: {v=10}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: [print(v)]
+Symbol Table: {v=8}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(6), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 13
+Execution Stack: []
+Symbol Table: {v=8}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(6), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(5), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(5), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(4), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(4), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(3), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(3), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(2), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(2), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(1), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(1), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(0), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [sleep(0), print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [print(v * 10)]
+Symbol Table: {v=10}
+Output: [8]
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: []
+Symbol Table: {v=10}
+Output: [8, 100]
+FileTable: {}
+Heap: {}
+

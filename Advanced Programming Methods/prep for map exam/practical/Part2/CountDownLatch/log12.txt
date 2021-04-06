@@ -1,0 +1,1274 @@
+ID: 12
+Execution Stack: [Ref(int) v1 ; Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v1, Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v1, Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2, Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2, Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3, int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3, int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt, v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt, v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2), v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2), v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v2= new (3), v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v2= new (3), v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [v3= new (4), latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [v3= new (4), latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)), fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)), fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)), print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)), print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 13
+Execution Stack: [write(v1,read(v1) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)) ; countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 13
+Execution Stack: [write(v1,read(v1) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)), countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 13
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)), countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v2) * 10)), print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v2) * 10)), print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 14
+Execution Stack: [write(v3,read(v2) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 14
+Execution Stack: [write(v3,read(v2) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v2)), countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 14
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [print(read(v2)), countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)), print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)), print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 15
+Execution Stack: [write(v3,read(v3) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 15
+Execution Stack: [write(v3,read(v3) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=30}
+
+ID: 12
+Execution Stack: [print(read(v3)), countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 15
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [print(read(v3)), countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt), await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt), await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [await(cnt), print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [await(cnt), print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [print(100), countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [print(100), countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt), print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [countDown(cnt), print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12, 100, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12, 100, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 3, 12, 300, 12, 100, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=3, 3=300}
+
+ID: 12
+Execution Stack: [Ref(int) v1 ; Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v1, Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v1, Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2 ; Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2, Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v2, Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3 ; int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3, int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [Ref(int) v3, int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt ; v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt, v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [int cnt, v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2) ; v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2), v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v1= new (2), v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(0, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {}
+
+ID: 12
+Execution Stack: [v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v2= new (3) ; v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v2= new (3), v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v2= new (3), v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(0, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2}
+
+ID: 12
+Execution Stack: [v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [v3= new (4) ; latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [v3= new (4), latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [v3= new (4), latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(0, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)) ; fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)), fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [latch(cnt, read(v2)), fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=0, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)) ; print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)), print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v1,read(v1) * 10)), print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 13
+Execution Stack: [write(v1,read(v1) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)) ; countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 13
+Execution Stack: [write(v1,read(v1) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=2, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)), countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 13
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v1)), countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: []
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v2,read(v2) * 10)) ; print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v2,read(v2) * 10)), print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v2,read(v2) * 10)), print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 14
+Execution Stack: [write(v2,read(v2) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v2)) ; countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 14
+Execution Stack: [write(v2,read(v2) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=3, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v2)), countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 14
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v2)), countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [countDown(cnt), fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)) ; print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)), print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [fork(write(v3,read(v3) * 10)), print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 15
+Execution Stack: [write(v3,read(v3) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v3)) ; countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 15
+Execution Stack: [write(v3,read(v3) * 10)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=4}
+
+ID: 12
+Execution Stack: [print(read(v3)), countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 15
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [print(read(v3)), countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt), await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt), await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [await(cnt) ; print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [await(cnt), print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [await(cnt), print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [print(100) ; countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [print(100), countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [print(100), countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt) ; print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt), print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [countDown(cnt), print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12, 100, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: [print(100)]
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12, 100, 12]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
+ID: 12
+Execution Stack: []
+Symbol Table: {cnt=1, v1=(1, int), v2=(2, int), v3=(3, int)}
+Output: [20, 12, 30, 12, 40, 12, 100, 12, 100]
+FileTable: {}
+Heap: {1=20, 2=30, 3=40}
+
