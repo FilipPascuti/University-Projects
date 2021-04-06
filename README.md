@@ -15,7 +15,7 @@ Year 1 Semester 2
   
 Year 2 Semester 1
 -----------------
-  * [Advanced Programming Methods](https://github.com/FilipPascuti/ToyLanguageInterpreter)
+  * [Advanced Programming Methods](https://github.com/FilipPascuti/University-Projects/tree/master/Advanced%20Programming%20Methods)
   * [Databases](https://github.com/FilipPascuti/University-Projects/tree/master/Databases)
   * [Computer Networks](https://github.com/FilipPascuti/University-Projects/tree/master/Computer%20Networks)
   * [Logical and Functional Programming](https://github.com/FilipPascuti/University-Projects/tree/master/Logical%20and%20Functional%20Programming)
