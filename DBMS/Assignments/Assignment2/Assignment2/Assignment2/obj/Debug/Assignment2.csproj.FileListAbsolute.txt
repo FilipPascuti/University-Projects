@@ -1,0 +1,10 @@
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\bin\Debug\Assignment2.exe.config
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\bin\Debug\Assignment2.exe
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\bin\Debug\Assignment2.pdb
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\obj\Debug\Assignment2.csprojAssemblyReference.cache
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\obj\Debug\Assignment2.Form1.resources
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\obj\Debug\Assignment2.Properties.Resources.resources
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\obj\Debug\Assignment2.csproj.GenerateResource.cache
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\obj\Debug\Assignment2.csproj.CoreCompileInputs.cache
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\obj\Debug\Assignment2.exe
+D:\Facultate\Anul_2\Semestrul2\DBMS\Assignments\Assignment2\Assignment2\Assignment2\obj\Debug\Assignment2.pdb

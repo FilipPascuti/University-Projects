@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<properties>
+	<!--<parent>Churches</parent>
+	--><!--<parent-query>select * from Churches</parent-query>--><!--
+	<parentPK>ChurchID</parentPK>
+	<child>Deacons</child>
+	--><!--<child-query>select * from deacons</child-query>--><!--
+	<childFK>Church</childFK>-->
+	<parent>Small_group</parent>
+	<!--<parent-query>select * from Small_group</parent-query>-->
+	<parentPK>GroupID</parentPK>
+	<child>Member</child>
+	<!--<child-query>select * from Member</child-query>-->
+	<childFK>Attending_group</childFK>
+</properties>
