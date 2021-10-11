@@ -19,3 +19,8 @@ Year 2 Semester 1
   * [Databases](https://github.com/FilipPascuti/University-Projects/tree/master/Databases)
   * [Computer Networks](https://github.com/FilipPascuti/University-Projects/tree/master/Computer%20Networks)
   * [Logical and Functional Programming](https://github.com/FilipPascuti/University-Projects/tree/master/Logical%20and%20Functional%20Programming)
+
+Year 2 Semester 2
+-----------------
+  * [SDI](https://github.com/FilipPascuti/University-Projects/tree/master/Advanced%20Programming%20Methods)
+  * [Software Engineering](https://github.com/FilipPascuti/Conference-Management-System)
