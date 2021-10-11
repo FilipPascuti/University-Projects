@@ -22,5 +22,5 @@ Year 2 Semester 1
 
 Year 2 Semester 2
 -----------------
-  * [SDI](https://github.com/FilipPascuti/University-Projects/tree/master/Advanced%20Programming%20Methods)
+  * [SDI](https://github.com/FilipPascuti/Song-review-app)
   * [Software Engineering](https://github.com/FilipPascuti/Conference-Management-System)
